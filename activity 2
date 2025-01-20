@@ -1,0 +1,31 @@
+<?php
+class Movie {
+    public $title;
+    public $director;
+    public $genre;
+    public $year;
+    public $rating;
+
+    public function setMovie($title, $director, $genre, $year, $rating) {
+        $this->title = $title;
+        $this->director = $director;
+        $this->genre = $genre;
+        $this->year = $year;
+        $this->rating = $rating;
+    }
+
+    public function getMovieInfo() {
+        return "Movie Title: " . $this->title . "\n" .
+               "Director: " . $this->director . "\n" .
+               "Genre: " . $this->genre . "\n" .
+               "Year: " . $this->year . "\n" .
+               "Rating: " . $this->rating;
+    }
+}
+
+$movie = new Movie();
+//Note:  The instruction to use the setProduct method with a name and price is confusing and seems like an error from the original instructions. I am setting movie details instead.
+$movie->setMovie("The IT Students In SJCB ", "Ashley Arce", "Horror", 2025, 8.5);
+print($movie->getMovieInfo());
+
+?>
