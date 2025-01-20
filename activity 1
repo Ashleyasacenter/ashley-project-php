@@ -1,0 +1,34 @@
+<?php
+
+class Product {
+    
+    public $Brand;
+    public $Price;
+    public $Size;
+    public $Quality;
+    public $Stock;
+
+    public function setProduct($Brand, $Price, $Size, $Quality, $Stock) {
+        $this->Brand = $Brand;
+        $this->Price = $Price;
+        $this->Size = $Size;
+        $this->Quality = $Quality;
+        $this->Stock = $Stock;
+    }
+
+    public function getProductInfo() {
+        return "Product Details:
+        Name: $this->Brand
+        Price: $$this->Price
+        Category: $this->Size
+        Description: $this->Quality
+        Stock: $this->Stock units available";
+    }
+}
+
+$product = new Product();
+
+$product->setProduct("Laptop", 35000, "11 in to 17 in", "High-performance laptop with 16GB RAM", 25);
+
+echo $product->getProductInfo();
+?>
